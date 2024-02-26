@@ -1,20 +1,21 @@
-import 'package:activityprepaeration/responsive/desktop_body.dart';
-import 'package:activityprepaeration/responsive/mobile_body.dart';
+import 'package:activityprepaeration/responsive/desktop_layout.dart';
+import 'package:activityprepaeration/responsive/mobile_layout.dart';
 import 'package:activityprepaeration/responsive/responsive_layout.dart';
+import 'package:activityprepaeration/responsive/tablet_layout.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<Home> createState() => _HomeState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ResponsiveLayout(desktopBody: myDesktopBody(), mobileBody: myMobileBody()),
+    return const Scaffold(
+      body: responsive_layout(desktopBody: myDesktopBody(), tabletBody: myTabletBody(), mobileBody: myMobileBody()),
     );
   }
 }
